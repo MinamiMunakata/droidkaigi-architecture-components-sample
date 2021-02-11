@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.example.github.api
+package com.example.data.api
 
-
-import com.android.example.github.vo.Repo
+import com.example.model.Repo
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -26,10 +25,10 @@ import com.google.gson.annotations.SerializedName
  * column.
  */
 data class RepoSearchResponse(
-    @SerializedName("total_count")
-    val total: Int = 0,
-    @SerializedName("items")
-    val items: List<Repo>
+        @SerializedName("total_count")
+        val total: Int = 0,
+        @SerializedName("items")
+        val items: List<Repo>
 ) {
     var nextPage: Int? = null
 }

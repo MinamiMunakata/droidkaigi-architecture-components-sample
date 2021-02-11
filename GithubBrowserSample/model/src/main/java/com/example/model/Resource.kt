@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.example.github.vo
+package com.example.model
 
-import com.android.example.github.vo.Status.ERROR
-import com.android.example.github.vo.Status.LOADING
-import com.android.example.github.vo.Status.SUCCESS
+import com.example.model.Status.ERROR
+import com.example.model.Status.LOADING
+import com.example.model.Status.SUCCESS
 
 /**
  * A generic class that holds a value with its loading status.

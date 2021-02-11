@@ -20,13 +20,13 @@
 
     <data>
 
-        <import type="com.android.example.github.vo.Status" />
+        <import type="com.example.model.Status" />
 
-        <import type="com.android.example.github.vo.Resource" />
+        <import type="com.example.model.Resource" />
 
         <import type="androidx.lifecycle.LiveData"/>
 
-        <import type="com.android.example.github.vo.Repo"/>
+        <import type="com.example.model.Repo"/>
 
         <variable
             name="repo"
@@ -34,7 +34,7 @@
 
         <variable
             name="contributorsStatus"
-            type="Status" />
+            type="com.example.model.Status" />
 
         <variable
             name="retryCallback"

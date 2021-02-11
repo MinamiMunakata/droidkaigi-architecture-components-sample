@@ -4,15 +4,15 @@ import android.content.Intent
 import android.net.Uri
 import com.android.example.github.BuildConfig
 import com.example.data.api.AccessTokenParameter
-import com.android.example.github.api.GithubAuthService
+import com.example.data.api.GithubAuthService
 import com.android.example.github.repository.AccessTokenRepository
-import com.android.example.github.vo.AccessToken
+import com.example.model.AccessToken
 import timber.log.Timber
 import javax.inject.Inject
 
 class LoginHelper @Inject constructor(
-    private val githubAuthService: GithubAuthService,
-    private val accessTokenRepository: AccessTokenRepository
+        private val githubAuthService: GithubAuthService,
+        private val accessTokenRepository: AccessTokenRepository
 ) {
     fun generateAuthorizationUrl(): Uri =
         Uri.Builder().apply {

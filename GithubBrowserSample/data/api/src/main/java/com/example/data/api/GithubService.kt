@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.android.example.github.api
+package com.example.data.api
 
 import androidx.lifecycle.LiveData
-import com.android.example.github.vo.Contributor
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.User
+import com.example.model.Contributor
+import com.example.model.Repo
+import com.example.model.User
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -37,14 +37,14 @@ interface GithubService {
 
     @GET("repos/{owner}/{name}")
     fun getRepo(
-        @Path("owner") owner: String,
-        @Path("name") name: String
+            @Path("owner") owner: String,
+            @Path("name") name: String
     ): LiveData<ApiResponse<Repo>>
 
     @GET("repos/{owner}/{name}/contributors")
     fun getContributors(
-        @Path("owner") owner: String,
-        @Path("name") name: String
+            @Path("owner") owner: String,
+            @Path("name") name: String
     ): LiveData<ApiResponse<List<Contributor>>>
 
     @GET("search/repositories")

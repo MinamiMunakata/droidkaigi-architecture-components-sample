@@ -1,6 +1,6 @@
 package com.android.example.github.repository
 
-import com.android.example.github.vo.AccessToken
+import com.example.model.AccessToken
 import com.chibatching.kotpref.KotprefModel
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -22,8 +22,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.android.example.github.repository.RepoRepository
 import com.android.example.github.util.mock
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.Resource
+import com.example.model.Repo
+import com.example.model.Resource
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before

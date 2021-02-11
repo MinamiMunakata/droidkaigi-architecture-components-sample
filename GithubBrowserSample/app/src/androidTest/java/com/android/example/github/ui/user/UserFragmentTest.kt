@@ -42,9 +42,9 @@ import com.android.example.github.util.TaskExecutorWithIdlingResourceRule
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.ViewModelUtil
 import com.android.example.github.util.mock
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.Resource
-import com.android.example.github.vo.User
+import com.example.model.Repo
+import com.example.model.Resource
+import com.example.model.User
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
 import org.junit.Rule

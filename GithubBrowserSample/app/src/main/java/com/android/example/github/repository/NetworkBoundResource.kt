@@ -21,11 +21,11 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
 import com.android.example.github.AppExecutors
-import com.android.example.github.api.ApiEmptyResponse
-import com.android.example.github.api.ApiErrorResponse
-import com.android.example.github.api.ApiResponse
-import com.android.example.github.api.ApiSuccessResponse
-import com.android.example.github.vo.Resource
+import com.example.data.api.ApiEmptyResponse
+import com.example.data.api.ApiErrorResponse
+import com.example.data.api.ApiResponse
+import com.example.data.api.ApiSuccessResponse
+import com.example.model.Resource
 
 /**
  * A generic class that can provide a resource backed by both the sqlite database and the network.

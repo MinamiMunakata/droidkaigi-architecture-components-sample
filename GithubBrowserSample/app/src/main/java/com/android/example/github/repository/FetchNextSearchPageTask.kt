@@ -18,23 +18,23 @@ package com.android.example.github.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.android.example.github.api.ApiEmptyResponse
-import com.android.example.github.api.ApiErrorResponse
-import com.android.example.github.api.ApiResponse
-import com.android.example.github.api.ApiSuccessResponse
-import com.android.example.github.api.GithubService
+import com.example.data.api.ApiEmptyResponse
+import com.example.data.api.ApiErrorResponse
+import com.example.data.api.ApiResponse
+import com.example.data.api.ApiSuccessResponse
+import com.example.data.api.GithubService
 import com.android.example.github.db.GithubDb
 import com.android.example.github.vo.RepoSearchResult
-import com.android.example.github.vo.Resource
+import com.example.model.Resource
 import java.io.IOException
 
 /**
  * A task that reads the search result in the database and fetches the next page, if it has one.
  */
 class FetchNextSearchPageTask constructor(
-    private val query: String,
-    private val githubService: GithubService,
-    private val db: GithubDb
+        private val query: String,
+        private val githubService: GithubService,
+        private val db: GithubDb
 ) : Runnable {
     private val _liveData = MutableLiveData<Resource<Boolean>>()
     val liveData: LiveData<Resource<Boolean>> = _liveData

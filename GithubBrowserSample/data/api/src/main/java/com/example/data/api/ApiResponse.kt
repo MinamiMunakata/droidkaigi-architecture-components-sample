@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.api
+package com.example.data.api
 
 import retrofit2.Response
 import timber.log.Timber
@@ -38,8 +38,8 @@ sealed class ApiResponse<T> {
                     ApiEmptyResponse()
                 } else {
                     ApiSuccessResponse(
-                        body = body,
-                        linkHeader = response.headers()?.get("link")
+                            body = body,
+                            linkHeader = response.headers()?.get("link")
                     )
                 }
             } else {
@@ -61,12 +61,12 @@ sealed class ApiResponse<T> {
 class ApiEmptyResponse<T> : ApiResponse<T>()
 
 data class ApiSuccessResponse<T>(
-    val body: T,
-    val links: Map<String, String>
+        val body: T,
+        val links: Map<String, String>
 ) : ApiResponse<T>() {
     constructor(body: T, linkHeader: String?) : this(
-        body = body,
-        links = linkHeader?.extractLinks() ?: emptyMap()
+            body = body,
+            links = linkHeader?.extractLinks() ?: emptyMap()
     )
 
     val nextPage: Int? by lazy(LazyThreadSafetyMode.NONE) {

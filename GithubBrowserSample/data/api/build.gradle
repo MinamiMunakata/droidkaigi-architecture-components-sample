@@ -26,6 +26,8 @@ android {
 }
 
 dependencies {
+    api project(":model")
+
     implementation deps.lifecycle.livedata_ktx
     implementation deps.kotlin.stdlib
     api deps.retrofit.runtime

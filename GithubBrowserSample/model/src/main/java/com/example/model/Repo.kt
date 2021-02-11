@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.vo
+package com.example.model
 
 import androidx.room.Embedded
 import androidx.room.Entity
@@ -32,17 +32,17 @@ import com.google.gson.annotations.SerializedName
     primaryKeys = ["name", "owner_login"]
 )
 data class Repo(
-    val id: Int,
-    @field:SerializedName("name")
+        val id: Int,
+        @field:SerializedName("name")
     val name: String,
-    @field:SerializedName("full_name")
+        @field:SerializedName("full_name")
     val fullName: String,
-    @field:SerializedName("description")
+        @field:SerializedName("description")
     val description: String?,
-    @field:SerializedName("owner")
+        @field:SerializedName("owner")
     @field:Embedded(prefix = "owner_")
     val owner: Owner,
-    @field:SerializedName("stargazers_count")
+        @field:SerializedName("stargazers_count")
     val stars: Int
 ) {
 
