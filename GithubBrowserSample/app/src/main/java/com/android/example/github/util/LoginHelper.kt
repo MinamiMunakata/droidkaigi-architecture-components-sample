@@ -5,7 +5,7 @@ import android.net.Uri
 import com.android.example.github.BuildConfig
 import com.example.data.api.AccessTokenParameter
 import com.example.data.api.GithubAuthService
-import com.android.example.github.repository.AccessTokenRepository
+import com.example.data.repository.AccessTokenRepository
 import com.example.model.AccessToken
 import timber.log.Timber
 import javax.inject.Inject
