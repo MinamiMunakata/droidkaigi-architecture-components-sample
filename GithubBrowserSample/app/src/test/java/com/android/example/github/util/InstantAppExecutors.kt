@@ -16,7 +16,7 @@
 
 package com.android.example.github.util
 
-import com.android.example.github.AppExecutors
+import com.example.executor.AppExecutors
 
 import java.util.concurrent.Executor
 
