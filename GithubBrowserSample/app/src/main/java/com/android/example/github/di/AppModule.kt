@@ -18,12 +18,14 @@ package com.android.example.github.di
 
 import android.app.Application
 import androidx.room.Room
-import com.example.data.db.GithubDb
-import com.example.data.db.RepoDao
-import com.example.data.db.UserDao
+import com.android.example.github.BuildConfig
 import com.example.data.api.GithubAuthService
 import com.example.data.api.GithubService
 import com.example.data.api_builder.ApiBuilder
+import com.example.data.db.GithubDb
+import com.example.data.db.RepoDao
+import com.example.data.db.UserDao
+import com.example.envvar.EnvVar
 import dagger.Module
 import dagger.Provides
 import okhttp3.logging.HttpLoggingInterceptor
@@ -71,6 +73,15 @@ class AppModule {
     @Provides
     fun provideRepoDao(db: GithubDb): RepoDao {
         return db.repoDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideEnvVar(): EnvVar {
+        return object : EnvVar {
+            override val GITHUB_CLIENT_ID = BuildConfig.GITHUB_CLIENT_ID
+            override val GITHUB_CLIENT_SECRET = BuildConfig.GITHUB_CLIENT_SECRET
+        }
     }
 }
 
