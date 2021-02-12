@@ -20,7 +20,7 @@ import androidx.lifecycle.LiveData
 import com.android.example.github.AppExecutors
 import com.example.data.api.GithubService
 import com.android.example.github.db.UserDao
-import com.android.example.github.testing.OpenForTesting
+import com.example.testing.OpenForTesting
 import com.example.model.Resource
 import com.example.model.User
 import javax.inject.Inject

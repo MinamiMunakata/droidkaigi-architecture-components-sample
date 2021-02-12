@@ -24,7 +24,7 @@ import com.example.data.api.GithubService
 import com.example.data.api.RepoSearchResponse
 import com.android.example.github.db.GithubDb
 import com.android.example.github.db.RepoDao
-import com.android.example.github.testing.OpenForTesting
+import com.example.testing.OpenForTesting
 import com.android.example.github.util.AbsentLiveData
 import com.android.example.github.util.RateLimiter
 import com.example.model.Contributor

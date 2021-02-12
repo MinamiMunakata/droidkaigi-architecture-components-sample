@@ -23,7 +23,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.android.example.github.testing.OpenForTesting
+import com.example.testing.OpenForTesting
 import com.example.model.Contributor
 import com.example.model.Repo
 import com.android.example.github.vo.RepoSearchResult
