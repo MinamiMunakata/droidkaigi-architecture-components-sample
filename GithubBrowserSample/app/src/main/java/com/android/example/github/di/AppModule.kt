@@ -18,12 +18,12 @@ package com.android.example.github.di
 
 import android.app.Application
 import androidx.room.Room
-import com.android.example.github.api.ApiBuilder
 import com.android.example.github.db.GithubDb
 import com.android.example.github.db.RepoDao
 import com.android.example.github.db.UserDao
 import com.example.data.api.GithubAuthService
 import com.example.data.api.GithubService
+import com.example.data.api_builder.ApiBuilder
 import dagger.Module
 import dagger.Provides
 import okhttp3.logging.HttpLoggingInterceptor
@@ -41,36 +41,36 @@ class AppModule {
                 loggingLevel = HttpLoggingInterceptor.Level.BODY
         )
     }
-}
 
-@Singleton
-@Provides
-fun provideGithubAuthService(
-        apiBuilder: ApiBuilder
-): GithubAuthService {
-    return apiBuilder.buildGithubAuthService(
-            baseUrl = "https://github.com/"
-    )
-}
+    @Singleton
+    @Provides
+    fun provideGithubAuthService(
+            apiBuilder: ApiBuilder
+    ): GithubAuthService {
+        return apiBuilder.buildGithubAuthService(
+                baseUrl = "https://github.com/"
+        )
+    }
 
-@Singleton
-@Provides
-fun provideDb(app: Application): GithubDb {
-    return Room
-            .databaseBuilder(app, GithubDb::class.java, "github.db")
-            .fallbackToDestructiveMigration()
-            .build()
-}
+    @Singleton
+    @Provides
+    fun provideDb(app: Application): GithubDb {
+        return Room
+                .databaseBuilder(app, GithubDb::class.java, "github.db")
+                .fallbackToDestructiveMigration()
+                .build()
+    }
 
-@Singleton
-@Provides
-fun provideUserDao(db: GithubDb): UserDao {
-    return db.userDao()
-}
+    @Singleton
+    @Provides
+    fun provideUserDao(db: GithubDb): UserDao {
+        return db.userDao()
+    }
 
-@Singleton
-@Provides
-fun provideRepoDao(db: GithubDb): RepoDao {
-    return db.repoDao()
+    @Singleton
+    @Provides
+    fun provideRepoDao(db: GithubDb): RepoDao {
+        return db.repoDao()
+    }
 }
 
