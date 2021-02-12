@@ -81,6 +81,7 @@ dependencies {
     implementation project(":data:db")
     releaseImplementation project(":testing-release")
     debugImplementation project(":testing-debug")
+    implementation project(":executor")
 
     implementation deps.app_compat
     implementation deps.recyclerview
