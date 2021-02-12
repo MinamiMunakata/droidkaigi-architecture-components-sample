@@ -1,4 +1,4 @@
-package com.android.example.github.api
+package com.example.data.api_builder
 
 import com.example.data.repository.AccessTokenRepository
 import okhttp3.Interceptor
