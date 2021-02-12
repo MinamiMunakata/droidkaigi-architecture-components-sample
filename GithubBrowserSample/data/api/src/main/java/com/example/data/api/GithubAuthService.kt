@@ -16,8 +16,6 @@
 
 package com.example.data.api
 
-import com.example.data.api.AccessTokenParameter
-import com.example.data.api.AccessTokenResponse
 import retrofit2.http.Body
 import retrofit2.http.Headers
 import retrofit2.http.POST
