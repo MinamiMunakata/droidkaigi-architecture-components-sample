@@ -24,7 +24,7 @@ import com.example.data.api.GithubService
 import com.example.data.api.RepoSearchResponse
 import com.example.data.db.GithubDb
 import com.example.data.db.RepoDao
-import com.android.example.github.util.AbsentLiveData
+import com.example.data.repository.AbsentLiveData
 import com.android.example.github.util.ApiUtil.successCall
 import com.android.example.github.util.InstantAppExecutors
 import com.android.example.github.util.TestUtil

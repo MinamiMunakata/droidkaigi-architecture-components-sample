@@ -23,7 +23,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import com.android.example.github.repository.RepoRepository
 import com.example.testing.OpenForTesting
-import com.android.example.github.util.AbsentLiveData
+import com.example.data.repository.AbsentLiveData
 import com.example.model.Repo
 import com.example.model.Resource
 import com.example.model.Status
