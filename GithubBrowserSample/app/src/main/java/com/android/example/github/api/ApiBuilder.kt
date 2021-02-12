@@ -1,6 +1,7 @@
 package com.android.example.github.api
 
 import com.android.example.github.util.LiveDataCallAdapterFactory
+import com.example.data.api.GithubAuthService
 import com.example.data.api.GithubService
 import com.example.data.api_builder.AuthenticationInterceptor
 import okhttp3.OkHttpClient
@@ -28,5 +29,15 @@ class ApiBuilder @Inject constructor(
                 .client(client)
                 .build()
                 .create(GithubService::class.java)
+    }
+
+    fun buildGithubAuthService(
+            baseUrl: String
+    ): GithubAuthService {
+        return Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(GithubAuthService::class.java)
     }
 }
