@@ -2,27 +2,28 @@ package com.android.example.github.util
 
 import android.content.Intent
 import android.net.Uri
-import com.android.example.github.BuildConfig
 import com.example.data.api.AccessTokenParameter
 import com.example.data.api.GithubAuthService
 import com.example.data.repository.AccessTokenRepository
+import com.example.envvar.EnvVar
 import com.example.model.AccessToken
 import timber.log.Timber
 import javax.inject.Inject
 
 class LoginHelper @Inject constructor(
         private val githubAuthService: GithubAuthService,
-        private val accessTokenRepository: AccessTokenRepository
+        private val accessTokenRepository: AccessTokenRepository,
+        private val envVar: EnvVar
 ) {
     fun generateAuthorizationUrl(): Uri =
-        Uri.Builder().apply {
-            scheme("https")
-            authority("github.com")
-            appendPath("login")
-            appendPath("oauth")
-            appendPath("authorize")
-            appendQueryParameter("client_id", BuildConfig.GITHUB_CLIENT_ID)
-        }.build()
+            Uri.Builder().apply {
+                scheme("https")
+                authority("github.com")
+                appendPath("login")
+                appendPath("oauth")
+                appendPath("authorize")
+                appendQueryParameter("client_id", envVar.GITHUB_CLIENT_ID)
+            }.build()
 
     suspend fun handleAuthRedirect(intent: Intent): Boolean {
         val uri = intent.data ?: return false
@@ -32,8 +33,8 @@ class LoginHelper @Inject constructor(
         Timber.i("code: $tempCode")
 
         val param = AccessTokenParameter(
-                clientId = BuildConfig.GITHUB_CLIENT_ID,
-                clientSecret = BuildConfig.GITHUB_CLIENT_SECRET,
+                clientId = envVar.GITHUB_CLIENT_ID,
+                clientSecret = envVar.GITHUB_CLIENT_SECRET,
                 code = tempCode
         )
 
