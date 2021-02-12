@@ -42,6 +42,7 @@ dependencies {
     implementation deps.timber
 
     implementation deps.dagger.runtime
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     kapt deps.dagger.compiler
     kapt deps.lifecycle.compiler
 
@@ -50,3 +51,4 @@ dependencies {
 
     testImplementation deps.junit
 }
+
