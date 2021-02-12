@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-include ':login'
-include ':executor'
-include ':testing-debug'
-include ':testing-release'
 
 include ':app',
         ':model',
         ':data:db',
         ':data:repository',
         ':data:api',
-        ':data:api-builder'
+        ':data:api-builder',
+        ':feature:login',
+        ':executor',
+        ':testing-debug',
+        ':testing-release'
