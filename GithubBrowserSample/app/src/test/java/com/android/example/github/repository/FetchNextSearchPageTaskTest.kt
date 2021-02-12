@@ -20,11 +20,11 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.data.api.GithubService
 import com.example.data.api.RepoSearchResponse
-import com.android.example.github.db.GithubDb
-import com.android.example.github.db.RepoDao
+import com.example.data.db.GithubDb
+import com.example.data.db.RepoDao
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.mock
-import com.android.example.github.vo.RepoSearchResult
+import com.example.data.db.RepoSearchResult
 import com.example.model.Resource
 import okhttp3.Headers
 import okhttp3.MediaType

@@ -23,8 +23,8 @@ import com.example.data.api.ApiErrorResponse
 import com.example.data.api.ApiResponse
 import com.example.data.api.ApiSuccessResponse
 import com.example.data.api.GithubService
-import com.android.example.github.db.GithubDb
-import com.android.example.github.vo.RepoSearchResult
+import com.example.data.db.GithubDb
+import com.example.data.db.RepoSearchResult
 import com.example.model.Resource
 import java.io.IOException
 

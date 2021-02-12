@@ -14,17 +14,30 @@
  * limitations under the License.
  */
 
-package com.android.example.github.vo
+package com.example.data.db
 
-import androidx.room.Entity
-import androidx.room.TypeConverters
-import com.android.example.github.db.GithubTypeConverters
 
-@Entity(primaryKeys = ["query"])
-@TypeConverters(GithubTypeConverters::class)
-data class RepoSearchResult(
-    val query: String,
-    val repoIds: List<Int>,
-    val totalCount: Int,
-    val next: Int?
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.example.model.Contributor
+import com.example.model.Repo
+import com.example.model.User
+
+/**
+ * Main database description.
+ */
+@Database(
+    entities = [
+        User::class,
+        Repo::class,
+        Contributor::class,
+        RepoSearchResult::class],
+    version = 3,
+    exportSchema = false
 )
+abstract class GithubDb : RoomDatabase() {
+
+    abstract fun userDao(): UserDao
+
+    abstract fun repoDao(): RepoDao
+}

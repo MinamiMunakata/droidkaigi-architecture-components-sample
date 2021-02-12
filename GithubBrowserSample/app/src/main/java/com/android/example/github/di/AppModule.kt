@@ -18,9 +18,9 @@ package com.android.example.github.di
 
 import android.app.Application
 import androidx.room.Room
-import com.android.example.github.db.GithubDb
-import com.android.example.github.db.RepoDao
-import com.android.example.github.db.UserDao
+import com.example.data.db.GithubDb
+import com.example.data.db.RepoDao
+import com.example.data.db.UserDao
 import com.example.data.api.GithubAuthService
 import com.example.data.api.GithubService
 import com.example.data.api_builder.ApiBuilder
