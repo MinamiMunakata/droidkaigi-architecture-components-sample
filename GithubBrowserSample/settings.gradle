@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-include ':di'
-include ':envvar'
 
 include ':app',
+        ':feature:login',
+        ':executor',
+        ':testing-release',
+        ':testing-debug',
         ':model',
         ':data:db',
         ':data:repository',
         ':data:api',
         ':data:api-builder',
-        ':feature:login',
-        ':executor',
-        ':testing-debug',
-        ':testing-release'
+        ':di',
+        ':envvar'

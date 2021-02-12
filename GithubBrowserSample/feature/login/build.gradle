@@ -34,15 +34,16 @@ dependencies {
     implementation project(":di")
 
     implementation deps.app_compat
+    implementation deps.core_ktx
     implementation deps.lifecycle.livedata_ktx
     implementation deps.lifecycle.runtime_ktx
     implementation deps.browser
     implementation deps.kotlin.stdlib
     implementation deps.coroutines.android
     implementation deps.timber
+    implementation deps.constraint_layout
 
     implementation deps.dagger.runtime
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     kapt deps.dagger.compiler
     kapt deps.lifecycle.compiler
 
