@@ -25,6 +25,7 @@ import com.android.example.github.util.ApiUtil
 import com.android.example.github.util.InstantAppExecutors
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.mock
+import com.example.data.repository.UserRepository
 import com.example.model.Resource
 import com.example.model.User
 import org.junit.Rule

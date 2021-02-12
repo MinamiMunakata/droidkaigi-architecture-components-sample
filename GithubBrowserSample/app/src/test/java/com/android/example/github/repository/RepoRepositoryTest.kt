@@ -33,6 +33,7 @@ import com.android.example.github.util.mock
 import com.example.model.Contributor
 import com.example.model.Repo
 import com.example.data.db.RepoSearchResult
+import com.example.data.repository.RepoRepository
 import com.example.model.Resource
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat

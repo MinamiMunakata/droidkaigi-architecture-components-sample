@@ -26,6 +26,7 @@ import com.android.example.github.util.ApiUtil
 import com.android.example.github.util.CountingAppExecutors
 import com.android.example.github.util.InstantAppExecutors
 import com.android.example.github.util.mock
+import com.example.data.repository.NetworkBoundResource
 import com.example.model.Resource
 import okhttp3.MediaType
 import okhttp3.ResponseBody

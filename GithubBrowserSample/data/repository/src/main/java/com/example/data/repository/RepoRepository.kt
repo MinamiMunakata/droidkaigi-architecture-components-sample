@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.repository
+package com.example.data.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.switchMap
@@ -25,8 +25,6 @@ import com.example.data.api.RepoSearchResponse
 import com.example.data.db.GithubDb
 import com.example.data.db.RepoDao
 import com.example.testing.OpenForTesting
-import com.example.data.repository.AbsentLiveData
-import com.example.data.repository.RateLimiter
 import com.example.model.Contributor
 import com.example.model.Repo
 import com.example.data.db.RepoSearchResult
