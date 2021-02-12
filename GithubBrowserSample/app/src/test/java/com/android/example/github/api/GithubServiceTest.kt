@@ -17,7 +17,7 @@
 package com.android.example.github.api
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.android.example.github.util.LiveDataCallAdapterFactory
+import com.example.data.api_builder.LiveDataCallAdapterFactory
 import com.android.example.github.util.LiveDataTestUtil.getValue
 import com.example.model.User
 import com.example.data.api.GithubService

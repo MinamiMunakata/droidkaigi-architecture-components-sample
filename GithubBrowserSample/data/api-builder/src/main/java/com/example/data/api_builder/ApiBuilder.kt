@@ -1,9 +1,7 @@
-package com.android.example.github.api
+package com.example.data.api_builder
 
-import com.android.example.github.util.LiveDataCallAdapterFactory
 import com.example.data.api.GithubAuthService
 import com.example.data.api.GithubService
-import com.example.data.api_builder.AuthenticationInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
