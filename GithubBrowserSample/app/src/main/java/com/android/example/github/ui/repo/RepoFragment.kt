@@ -35,7 +35,7 @@ import com.example.executor.AppExecutors
 import com.android.example.github.R
 import com.android.example.github.binding.FragmentDataBindingComponent
 import com.android.example.github.databinding.RepoFragmentBinding
-import com.android.example.github.di.Injectable
+import com.example.di.Injectable
 import com.android.example.github.ui.common.RetryCallback
 import com.android.example.github.util.autoCleared
 import javax.inject.Inject

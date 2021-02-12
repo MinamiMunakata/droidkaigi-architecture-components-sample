@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.di
+package com.example.di
 
 /**
  * Marks an activity / fragment injectable.

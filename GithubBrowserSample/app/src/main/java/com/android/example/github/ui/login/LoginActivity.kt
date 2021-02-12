@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.lifecycle.lifecycleScope
 import com.android.example.github.R
-import com.android.example.github.di.Injectable
+import com.example.di.Injectable
 import com.example.feature.login.LoginHelper
 import kotlinx.coroutines.launch
 import javax.inject.Inject
