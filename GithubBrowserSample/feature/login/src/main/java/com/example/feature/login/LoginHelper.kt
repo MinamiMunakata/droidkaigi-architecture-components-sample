@@ -1,4 +1,4 @@
-package com.android.example.github.util
+package com.example.feature.login
 
 import android.content.Intent
 import android.net.Uri
