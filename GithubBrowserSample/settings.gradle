@@ -17,4 +17,5 @@
 include ':app',
         ':model',
         ':data:repository',
-        ':data:api'
+        ':data:api',
+        ':data:api-builder'
