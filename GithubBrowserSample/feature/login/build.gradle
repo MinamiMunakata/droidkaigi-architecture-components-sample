@@ -31,6 +31,7 @@ dependencies {
     implementation project(":data:api")
     implementation project(":data:repository")
     implementation project(":envvar")
+    implementation project(":di")
 
     implementation deps.app_compat
     implementation deps.lifecycle.livedata_ktx

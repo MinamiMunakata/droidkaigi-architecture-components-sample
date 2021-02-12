@@ -83,6 +83,7 @@ dependencies {
     debugImplementation project(":testing-debug")
     implementation project(":executor")
     implementation project(":envvar")
+    implementation project(":di")
 
     implementation project(":feature:login")
 
